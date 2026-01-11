@@ -1,4 +1,3 @@
-// scripts/setupRole.js
 const hre = require("hardhat");
 
 async function main() {

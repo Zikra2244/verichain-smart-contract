@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/access/AccessControl.sol";
 
 contract AcademicNFT is ERC721, ERC721URIStorage, AccessControl {
-    // Definisi Peran (Role)
+    
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
     bytes32 public constant TRANSFER_ROLE = keccak256("TRANSFER_ROLE");
 
@@ -26,7 +26,7 @@ contract AcademicNFT is ERC721, ERC721URIStorage, AccessControl {
         _setTokenURI(tokenId, uri);
     }
 
-    // Logika Soulbound: Hanya TRANSFER_ROLE yang boleh memindahkan token
+    
     function _update(address to, uint256 tokenId, address auth)
         internal
         override(ERC721)
